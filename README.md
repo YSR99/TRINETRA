@@ -1,7 +1,8 @@
 # TriNetraa
 
-![trinetra04](https://github.com/user-attachments/assets/633540e5-03d4-4ff8-aaca-28ea73d35266)
-
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/633540e5-03d4-4ff8-aaca-28ea73d35266" width="600" height="300" />
+</p>
 
 ## Problem Statement
 
