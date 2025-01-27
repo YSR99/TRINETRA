@@ -279,7 +279,6 @@ a:hover {
   -ms-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);*/
   position: relative;
-  display: block;
   }
 
 #arrow:after {
@@ -304,7 +303,7 @@ a:hover {
   /*display: none;*/
 }
 
-#pulse {
+#त्रिNetra {
   position: relative;
   top: 100px;
 }
@@ -329,9 +328,9 @@ a:hover {
 borrowed with love from: http://www.justinaguilar.com/animations/
  */
 
-.pulse {
-  animation-name: pulse;
-  -webkit-animation-name: pulse;  
+.त्रिNetra {
+  animation-name: त्रिNetra;
+  -webkit-animation-name: त्रिNetra;
 
   animation-duration: 1.5s; 
   -webkit-animation-duration: 1.5s;
@@ -340,7 +339,7 @@ borrowed with love from: http://www.justinaguilar.com/animations/
   -webkit-animation-iteration-count: infinite;
 }
 
-@keyframes pulse {
+@keyframes त्रिNetra {
   0% {
     transform: scale(0.9);
     opacity: 0.7;   
@@ -355,7 +354,7 @@ borrowed with love from: http://www.justinaguilar.com/animations/
   }     
 }
 
-@-webkit-keyframes pulse {
+@-webkit-keyframes त्रिNetra {
   0% {
     -webkit-transform: scale(0.95);
     opacity: 0.7;   

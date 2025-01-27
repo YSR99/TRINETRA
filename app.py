@@ -1,27 +1,24 @@
 from flask import Flask, render_template, request
-from flask_sockets import Sockets
+from flask_socketio import SocketIO
 import model
 import json
 
 app = Flask(__name__)
-sockets = Sockets(app)
+socketio = SocketIO(app)
 
 @app.route("/")
 def index():
-	return render_template("splash.html")
+    return render_template("splash.html")
 
 @app.route("/begin")
 def get_heartrate():
-	return render_template("index.html")
+    return render_template("index.html")
 
-
-@sockets.route('/echo')
-def echo_socket(ws):
-	while True:
-		message = json.loads(ws.receive())
-		signals = model.parse_RGB(message)
-		
-		ws.send(signals)
+@socketio.on('message')
+def echo_socket(message):
+    data = json.loads(message)
+    signals = model.parse_RGB(data)
+    socketio.send(signals)
 
 if __name__ == "__main__":
-	app.run(debug = True)
+    socketio.run(app, debug=True)

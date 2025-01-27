@@ -36,25 +36,29 @@ var camera = (function(){
     var buttonBar = document.getElementById("buttonBar");
     var allowWebcam = document.getElementById("allowWebcam");
 
-    if (navigator.getUserMedia){
-      navigator.getUserMedia({
-        video: true,
-        audio: false
-      }, function(stream){
-        if (video.mozSrcObject !== undefined) { // for Firefox
-          video.mozSrcObject = stream;
-        } else {
-          video.src = window.URL.createObjectURL(stream);
-        }
-        hidden.style.display = "none";
-        hidden.className = "";
-        allowWebcam.style.display = "none";
+    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+  navigator.mediaDevices.getUserMedia({
+    video: true,
+    audio: false
+  }).then(function (stream) {
+    // Modern way to assign a stream to a video element
+    video.srcObject = stream;
 
-        buttonBar.className = "button";
+    hidden.style.display = "none";
+    hidden.className = "";
+    allowWebcam.style.display = "none";
 
-        initCanvas();
-      }, errorCallback);
-      };
+    buttonBar.className = "button";
+
+    initCanvas();
+  }).catch(function (error) {
+    console.error("Error accessing webcam: ", error);
+    errorCallback(error);
+  });
+} else {
+  console.error("getUserMedia is not supported in this browser.");
+}
+
   };
 
   function initCanvas(){
