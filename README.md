@@ -1,9 +1,10 @@
 # TriNetraa
 
 ## Team
--Shivam Mehta (22BAI70606)
 -Ujjwal Mishra (22BAI70666)
 -Rishikesh Shukla (22BAI70612)
+-Purvansh Kaishtha (22BAI70621)
+-Shivam Mehta (22BAI70606)
 -Yuvraj Rana (22BAI706771)
 <p align="center">
   <img src="https://github.com/user-attachments/assets/633540e5-03d4-4ff8-aaca-28ea73d35266" width="600" height="300" />
