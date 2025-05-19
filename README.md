@@ -1,5 +1,5 @@
 # **TriNetraa**
-!(https://example.com/system-architecture.png)
+![](https://github.com/YSR99/TRINETRA/blob/main/Assets/Logo%20TriNetra.png)
 ## **Team Members**
 - **Ujjwal Mishra** (22BAI70666)  
 - **Rishikesh Shukla** (22BAI70612)  
