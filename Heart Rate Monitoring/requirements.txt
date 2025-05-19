@@ -1,0 +1,18 @@
+# Requirements for Heart Rate Monitoring System
+# Compatible with Python 3.8 or higher
+# Install using: pip install -r requirements.txt
+
+opencv-python>=4.5.5.64
+dlib>=19.22.0
+numpy>=1.19.5
+scipy>=1.7.3
+
+# Optional: for improved performance with dlib (recommended)
+# Install dlib with GPU support if CUDA is available
+# Alternatively, use: pip install dlib --verbose for CPU-only
+# Note: dlib requires CMake and a C++ compiler
+
+# Notes:
+# - Ensure 'shape_predictor_68_face_landmarks.dat' is downloaded and placed in the working directory
+# - Download from: http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2
+# - Python's built-in 'collections' module is used (no installation needed)
